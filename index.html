@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mahmoud Mouzoun - Full Stack Developer Portfolio">
+    <meta property="og:title" content="Mahmoud Mouzoun | Full Stack Fire">
+    <meta property="og:description" content="Crafting cutting-edge web solutions with passion and precision">
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+    <title>Mahmoud Mouzoun | Full Stack Fire</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">MM</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#github">GitHub</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mode-toggle">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero animate-section">
+        <div class="hero-content">
+            <h1>Mahmoud Mouzoun</h1>
+            <h2 class="typewriter">Full Stack Developer</h2>
+            <p>Unleashing Code That Scales & Sparks ⚡</p>
+            <a href="#contact" class="btn">Let’s Build Something</a>
+        </div>
+        <canvas id="matrix-bg"></canvas>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about animate-section">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <p>Développeur web passionné par l’innovation et les solutions sur mesure. Actuellement à la recherche d’une alternance à partir de janvier 2025, je souhaite collaborer avec des mentors pour développer des applications web performantes et explorer des technologies de pointe.</p>
+            <div class="timeline">
+                <p id="terminal-about"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills animate-section">
+        <h2>Skill Matrix</h2>
+        <div class="skills-grid">
+            <canvas id="skills-chart"></canvas>
+        </div>
+        <div class="code-stats">
+            <h3>Code Pulse</h3>
+            <p>Lines of Code: <span id="loc">42K</span> | Commits: <span id="commits">512</span></p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects animate-section">
+        <h2>Project Vault</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="card-front">
+                    <h3>IRC</h3>
+                </div>
+                <div class="card-back">
+                    <p>A custom IRC client/server implementation showcasing networking and real-time communication skills.</p>
+                    <p>Tech: Nest, Typescript, React, Socket Programming, MongoDB</p>
+                    <a href="https://github.com/Mahmoud-Mh/IRC" target="_blank" class="btn-small">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-front">
+                    <h3>Jvisionary</h3>
+                </div>
+                <div class="card-back">
+                    <p>A job board application for connecting employers and job seekers.</p>
+                    <p>Tech: Javascript, Html, Css, MySQL </p>
+                    <a href="https://github.com/Mahmoud-Mh/Jvisionary" target="_blank" class="btn-small">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-front">
+                    <h3>WarCivilisation</h3>
+                </div>
+                <div class="card-back">
+                    <p>A strategy game prototype highlighting game development and algorithmic thinking.</p>
+                    <p>Tech: Java, LibGDX, PS</p>
+                    <a href="https://github.com/Mahmoud-Mh/CivilisationWar" target="_blank" class="btn-small">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section id="github" class="github animate-section">
+        <h2>GitHub Galaxy</h2>
+        <div class="github-container">
+            <p id="github-stats">Loading GitHub stats...</p>
+            <a href="https://github.com/Mahmoud-Mh" target="_blank" class="btn">Visit Mahmoud-Mh</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact animate-section">
+        <h2>Plug In</h2>
+        <div class="contact-grid">
+            <p><a href="tel:+33760104787">+33 760 104 787</a></p>
+            <p><a href="mailto:mahmoud.mouzoun@epitech.eu">mahmoud.mouzoun@epitech.eu</a></p>
+            <p>Montpellier, France</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://github.com/Mahmoud-Mh" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
+            <a href="https://linkedin.com/in/mahmoud-mouzoun" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+        </div>
+        <div class="qr-code" id="qr-code"></div>
+        <div class="terminal">
+            <p>Type 'hello' to say hi:</p>
+            <input type="text" id="terminal-input" placeholder="> " onkeydown="checkTerminal(event)">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Mahmoud Mouzoun | Code is Power</p>
+        <a href="#home" class="back-to-top">↑ Top</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
