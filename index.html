@@ -10,22 +10,37 @@
     <title>Mahmoud Mouzoun | Full Stack Fire</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <!-- EmailJS for contact form -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Initialize EmailJS with public key
+            emailjs.init("XRxdJO6K7pmAPu1Jx");
+        })();
+    </script>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">MM</div>
+        <div class="logo"><a href="#home">MM</a></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#github">GitHub</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="mode-toggle">
-            <span class="sun">☀️</span>
-            <span class="moon">🌙</span>
+        <div class="navbar-controls">
+            <div class="lang-toggle">
+                <span class="lang-fr">FR</span>
+                <span class="lang-en">EN</span>
+            </div>
+            <div class="mode-toggle">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+            </div>
         </div>
     </nav>
 
@@ -35,7 +50,10 @@
             <h1>Mahmoud Mouzoun</h1>
             <h2 class="typewriter">Full Stack Developer</h2>
             <p>Unleashing Code That Scales & Sparks ⚡</p>
-            <a href="#contact" class="btn">Let’s Build Something</a>
+            <div class="hero-buttons">
+                <a href="mailto:mahmoud.mouzoun@epitech.eu" class="btn">Let's Build Something</a>
+                <a href="./Mahmoud_Mouzoun_CV.pdf" class="btn btn-secondary" download>Download CV</a>
+            </div>
         </div>
         <canvas id="matrix-bg"></canvas>
     </section>
@@ -44,7 +62,7 @@
     <section id="about" class="about animate-section">
         <h2>About Me</h2>
         <div class="about-container">
-            <p>Développeur web passionné par l’innovation et les solutions sur mesure. Actuellement à la recherche d’une alternance à partir de janvier 2025, je souhaite collaborer avec des mentors pour développer des applications web performantes et explorer des technologies de pointe.</p>
+            <p>Développeur web passionné par l'innovation et les solutions sur mesure. Actuellement à la recherche d'une alternance à partir de janvier 2025, je souhaite collaborer avec des mentors pour développer des applications web performantes et explorer des technologies de pointe.</p>
             <div class="timeline">
                 <p id="terminal-about"></p>
             </div>
@@ -61,6 +79,74 @@
             <h3>Code Pulse</h3>
             <p>Lines of Code: <span id="loc">42K</span> | Commits: <span id="commits">512</span></p>
         </div>
+        
+        <!-- Technical Skills -->
+        <div class="technical-skills">
+            <div class="skills-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-pills">
+                    <span class="skill-pill">JavaScript</span>
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">Java</span>
+                    <span class="skill-pill">PHP</span>
+                    <span class="skill-pill">TypeScript</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Frontend</h3>
+                <div class="skill-pills">
+                    <span class="skill-pill">HTML5</span>
+                    <span class="skill-pill">CSS3</span>
+                    <span class="skill-pill">React.js</span>
+                    <span class="skill-pill">Sass</span>
+                    <span class="skill-pill">Bootstrap</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Backend & Frameworks</h3>
+                <div class="skill-pills">
+                    <span class="skill-pill">Node.js</span>
+                    <span class="skill-pill">Express.js</span>
+                    <span class="skill-pill">Django</span>
+                    <span class="skill-pill">NestJS</span>
+                    <span class="skill-pill">Docker</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Databases</h3>
+                <div class="skill-pills">
+                    <span class="skill-pill">MongoDB</span>
+                    <span class="skill-pill">PostgreSQL</span>
+                    <span class="skill-pill">MySQL</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Tools & Methods</h3>
+                <div class="skill-pills">
+                    <span class="skill-pill">Git</span>
+                    <span class="skill-pill">Jenkins</span>
+                    <span class="skill-pill">Agile/Kanban</span>
+                    <span class="skill-pill">CI/CD</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Languages</h3>
+                <div class="skill-pills">
+                    <span class="skill-pill">French (C1)</span>
+                    <span class="skill-pill">English (C2)</span>
+                    <span class="skill-pill">Arabic</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Qualities</h3>
+                <div class="skill-pills">
+                    <span class="skill-pill" data-en="Motivation">Motivation</span>
+                    <span class="skill-pill" data-en="Autonomy">Autonomy</span>
+                    <span class="skill-pill" data-en="Proactivity">Proactivity</span>
+                    <span class="skill-pill" data-en="Creativity">Creativity</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Projects Section -->
@@ -69,43 +155,106 @@
         <div class="projects-grid">
             <div class="project-card">
                 <div class="card-front">
-                    <h3>IRC</h3>
+                    <h3>TrellTech</h3>
                 </div>
                 <div class="card-back">
-                    <p>A custom IRC client/server implementation showcasing networking and real-time communication skills.</p>
-                    <p>Tech: Nest, Typescript, React, Socket Programming, MongoDB</p>
+                    <p>A Trello-like project management system with dynamic user assignment and responsive interface.</p>
+                    <p>Tech: TypeScript, React, MongoDB, REST API</p>
                     <a href="https://github.com/Mahmoud-Mh/IRC" target="_blank" class="btn-small">View on GitHub</a>
                 </div>
             </div>
             <div class="project-card">
                 <div class="card-front">
-                    <h3>Jvisionary</h3>
+                    <h3>My_Marvin</h3>
                 </div>
                 <div class="card-back">
-                    <p>A job board application for connecting employers and job seekers.</p>
-                    <p>Tech: Javascript, Html, Css, MySQL </p>
+                    <p>Advanced Jenkins configuration via JCasC and DSL, creating automated CI/CD pipelines with role-based access control in YAML.</p>
+                    <p>Tech: Jenkins, JCasC, Job DSL, YAML, Docker</p>
                     <a href="https://github.com/Mahmoud-Mh/Jvisionary" target="_blank" class="btn-small">View on GitHub</a>
                 </div>
             </div>
             <div class="project-card">
                 <div class="card-front">
-                    <h3>WarCivilisation</h3>
+                    <h3>Tweet</h3>
                 </div>
                 <div class="card-back">
-                    <p>A strategy game prototype highlighting game development and algorithmic thinking.</p>
-                    <p>Tech: Java, LibGDX, PS</p>
+                    <p>Real-time chat platform inspired by IRC, with channel management, user permissions and advanced features.</p>
+                    <p>Tech: Nest.JS, React, TypeScript, MongoDB, Socket.io</p>
                     <a href="https://github.com/Mahmoud-Mh/CivilisationWar" target="_blank" class="btn-small">View on GitHub</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- GitHub Section -->
-    <section id="github" class="github animate-section">
-        <h2>GitHub Galaxy</h2>
-        <div class="github-container">
-            <p id="github-stats">Loading GitHub stats...</p>
-            <a href="https://github.com/Mahmoud-Mh" target="_blank" class="btn">Visit Mahmoud-Mh</a>
+    <!-- Experience Section -->
+    <section id="experience" class="experience animate-section">
+        <h2>Professional Experience</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <span>02/2025 - Present</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>SFVE</h3>
+                    <p>AI Developer Intern</p>
+                    <p>Development of web applications, collaboration with multidisciplinary teams, integration of innovative AI technologies.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <span>08/2023 - 09/2023</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>SRTIMCom</h3>
+                    <p>Full Stack Developer Intern</p>
+                    <p>Worked on optimizing business processes through personalized solutions.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <span>07/2023 - 08/2023</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Wilaya D'Errachidia</h3>
+                    <p>Data Analyst Intern</p>
+                    <p>Analyzing and processing data to extract meaningful insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education animate-section">
+        <h2>Education</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <span>2024-2027</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Master of Science Pro | EPITECH</h3>
+                    <p>IT Systems Architect</p>
+                    <p>RNCP Level 7</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <span>2022-2023</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Licence Professionnelle | ENSA</h3>
+                    <p>Big Data</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <span>2020-2022</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>BTS Ordiciel</h3>
+                    <p>Computer Development</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -113,24 +262,39 @@
     <section id="contact" class="contact animate-section">
         <h2>Plug In</h2>
         <div class="contact-grid">
-            <p><a href="tel:+33760104787">+33 760 104 787</a></p>
+            <p><a href="tel:+33760104787">+33 7 60 10 47 87</a></p>
             <p><a href="mailto:mahmoud.mouzoun@epitech.eu">mahmoud.mouzoun@epitech.eu</a></p>
             <p>Montpellier, France</p>
         </div>
         <div class="social-icons">
-            <a href="https://github.com/Mahmoud-Mh" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/mahmoud-mouzoun-2177481b7/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+            <a href="https://github.com/Mahmoud-Mh" target="_blank" class="social-hover"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/mahmoud-mouzoun-2177481b7/" target="_blank" class="social-hover"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+        </div>
+        <div class="contact-form">
+            <h3>Quick Message</h3>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="recipient" value="mahmoud.mouzoun@epitech.eu">
+                </div>
+                <button type="submit" class="btn btn-form">Send Message</button>
+            </form>
+            <div id="form-status" class="form-status" style="display: none;"></div>
         </div>
         <div class="qr-code" id="qr-code"></div>
-        <div class="terminal">
-            <p>Type 'hello' to say hi:</p>
-            <input type="text" id="terminal-input" placeholder="> " onkeydown="checkTerminal(event)">
-        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Mahmoud Mouzoun | Code is Power</p>
+        <p>© 2025 Mahmoud Mouzoun</p>
         <a href="#home" class="back-to-top">↑ Top</a>
     </footer>
 
