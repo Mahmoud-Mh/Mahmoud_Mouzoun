@@ -254,7 +254,7 @@ const translations = {
         
         // About Section
         'about-title': 'About Me',
-        'about-text': 'Web developer passionate about innovation and custom solutions. Currently looking for an apprenticeship starting from January 2025, I wish to collaborate with mentors to develop high-performance web applications and explore cutting-edge technologies.',
+        'about-text': 'Web developer passionate about innovation and custom solutions. Currently looking for an apprenticeship starting from August 2025, I wish to collaborate with mentors to develop high-performance web applications and explore cutting-edge technologies.',
         'about-timeline1': '> 2023: Booted up at Epitech',
         'about-timeline2': '> 2024: Deployed Full Stack skills',
         'about-timeline3': '> 2025: Ready to dominate',
@@ -328,7 +328,7 @@ const translations = {
         
         // About Section
         'about-title': 'À Propos de Moi',
-        'about-text': 'Développeur web passionné par l\'innovation et les solutions sur mesure. Actuellement à la recherche d\'une alternance à partir de janvier 2025, je souhaite collaborer avec des mentors pour développer des applications web performantes et explorer des technologies de pointe.',
+        'about-text': 'Développeur web passionné par l\'innovation et les solutions sur mesure. Actuellement à la recherche d\'une alternance à partir de Août 2025, je souhaite collaborer avec des mentors pour développer des applications web performantes et explorer des technologies de pointe.',
         'about-timeline1': '> 2023: Démarrage à Epitech',
         'about-timeline2': '> 2024: Maîtrise Full Stack',
         'about-timeline3': '> 2025: Prêt à dominer',
